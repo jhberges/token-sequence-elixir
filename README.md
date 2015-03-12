@@ -10,4 +10,4 @@ Providing ordered sequence numbers for tokens, using Redis.io as a backend.
     $ iex -S mix
 
 ## Prerequisites for runtime
-You will need a redis server
+You will need a redis server, and Elixir
