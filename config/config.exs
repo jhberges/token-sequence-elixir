@@ -30,4 +30,4 @@ config :redis,
   password: ""
 
 config :urna,
-  http_port: 9000
+  http_port: 9100
