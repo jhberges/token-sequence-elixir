@@ -13,7 +13,10 @@ defmodule RedisFacade do
         send caller,  Process.whereis(:redis_server) |> Exredis.Api.incr(token)
         loop()
       {:current, token, caller} ->
-        send caller,  Process.whereis(:redis_server) |> Exredis.Api.get(token)
+        Logger.debug("Current for #{URI.decode(token)}")
+        value = Process.whereis(:redis_server) |> Exredis.Api.get(URI.decode(token))
+        Logger.debug("Current for #{URI.decode(token)} is #{value}")
+        send caller,  value
         loop()
     end
   end
