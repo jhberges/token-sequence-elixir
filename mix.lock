@@ -1,0 +1,9 @@
+%{"cauldron": {:hex, :cauldron, "0.1.5"},
+  "eredis": {:hex, :eredis, "1.0.7"},
+  "exredis": {:hex, :exredis, "0.1.1"},
+  "exts": {:hex, :exts, "0.2.2"},
+  "httprot": {:hex, :httprot, "0.1.5"},
+  "jazz": {:hex, :jazz, "0.2.1"},
+  "reagent": {:hex, :reagent, "0.1.5"},
+  "socket": {:hex, :socket, "0.2.8"},
+  "urna": {:hex, :urna, "0.1.4"}}
