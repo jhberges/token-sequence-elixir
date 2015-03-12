@@ -21,4 +21,13 @@ use Mix.Config
 # Configuration from the imported file will override the ones defined
 # here (which is why it is important to import them last).
 #
-#     import_config "#{Mix.env}.exs"
+import_config "#{Mix.env}.exs"
+
+config :redis,
+  hostname: "localhost",
+  port: 6379,
+  database: 0,
+  password: ""
+
+config :urna,
+  http_port: 9000
