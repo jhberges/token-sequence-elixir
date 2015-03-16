@@ -12,11 +12,12 @@ defmodule TokSeq.Supervisor do
   def init(:ok) do
     Logger.info("TokSeq.Supervisor init")
     children = [
-      #worker(RedisFacade, [[name: @redis_facade_name]]),
       worker(TokSeq, [[name: @api_name]]),
       worker(Urna, [TokSeq, [port: Application.get_env(:token_sequence, :urna_http_port)]])
     ]
 
-    supervise(children, strategy: :one_for_one)
+    result = supervise(children, strategy: :one_for_one)
+    Logger.info("TokSeq.Supervisor init'ed -> #{inspect result}")
+    result
   end
 end

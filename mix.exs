@@ -12,8 +12,8 @@ defmodule TokSeq.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [ registered: [:boot, :redis_server, :redis_facade, :urna_pid],
-      applications: [:logger],
+    [ registered: [:boot, TokSeq.Api],
+      applications: [:logger, :eredis, :cauldron, :urna],
       mod: {Boot, []}
     ]
   end
