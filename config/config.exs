@@ -23,11 +23,9 @@ use Mix.Config
 #
 import_config "#{Mix.env}.exs"
 
-config :redis,
-  hostname: "localhost",
-  port: 6379,
-  database: 0,
-  password: ""
-
-config :urna,
-  http_port: 9100
+config :token_sequence,
+  redis_hostname: "localhost",
+  redis_port: 6379,
+  redis_database: 0,
+  redis_password: "",
+  urna_http_port: 9100

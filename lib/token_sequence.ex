@@ -2,8 +2,11 @@ defmodule TokSeq do
 	use Urna
 	require Logger
 
-	def start_link do
-		Logger.info("TokSeq initialized");
+	def start_link([name: theName]) do
+		{:ok, redisFacadePid} = RedisFacade.start_link([name: ""])
+		Logger.info("TokSeq initialized -- redisFacade: #{inspect redisFacadePid}");
+		Process.register(redisFacadePid, :redis_facade)
+		{:ok, self()}
 	end
 
 	namespace :tokenseq do

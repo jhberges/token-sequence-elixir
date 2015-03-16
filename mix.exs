@@ -14,7 +14,8 @@ defmodule TokSeq.Mixfile do
   def application do
     [ registered: [:boot, :redis_server, :redis_facade, :urna_pid],
       applications: [:logger],
-      mod: {Boot, []}]
+      mod: {Boot, []}
+    ]
   end
 
   # Dependencies can be Hex packages:
@@ -28,6 +29,7 @@ defmodule TokSeq.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
+	{:exrm, "~> 0.15.3"},
     	{:exredis, ">= 0.1.1"},
     	{:urna, ">= 0.1.4"}
     ]
