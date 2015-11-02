@@ -29,9 +29,11 @@ defmodule TokSeq.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-	{:exrm, "~> 0.15.3"},
+	    {:exrm, "~> 0.15.3"},
     	{:exredis, ">= 0.1.1"},
-    	{:urna, ">= 0.1.4"}
+      {:cauldron, ">= 0.1.5"},
+    	{:urna, ">= 0.1.4"},
+      {:mixunit, "~> 0.9.2"}
     ]
   end
 end

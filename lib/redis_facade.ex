@@ -1,5 +1,5 @@
 defmodule RedisFacade do
-  use Exredis
+  import Exredis
   require Logger
 
   def start_link([name: name]) do

@@ -4,8 +4,8 @@ defmodule Boot do
   require Logger
   @behaviour :application
 
-  def start(_type, _args) do
-    Logger.info("Starting! #{inspect _args}")
+  def start(_type, args) do
+    Logger.info("Starting! #{inspect args}")
     supervisorPid = TokSeq.Supervisor.start_link
     Logger.info("Boot started -> #{inspect supervisorPid}")
     supervisorPid
