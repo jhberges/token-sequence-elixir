@@ -3,9 +3,9 @@ defmodule TokSeq.Mixfile do
 
   def project do
     [app: :token_sequence,
-     version: "0.0.1",
-     elixir: "~> 1.0",
-     deps: deps]
+     version: "0.1.0",
+     elixir: "~> 1.7",
+     deps: deps()]
   end
 
   # Configuration for the OTP application
@@ -31,8 +31,8 @@ defmodule TokSeq.Mixfile do
     [
 	    {:exrm, "~> 0.15.3"},
     	{:exredis, ">= 0.1.1"},
-      {:cauldron, ">= 0.1.5"},
-    	{:urna, ">= 0.1.4"},
+        {:cauldron, "~> 0.1"},
+    	{:urna, ">= 0.2.5"},
       {:mixunit, "~> 0.9.2"}
     ]
   end

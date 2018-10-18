@@ -5,7 +5,6 @@ defmodule TokSeq do
 	def start_link([name: theName]) do
 		{:ok, redisFacadePid} = RedisFacade.start_link([name: ""])
 		Process.register(redisFacadePid, :redis_facade) # Should've used GenServer for this, so that logical local names could have been used.
-		Logger.info("TokSeq initialized -- redisFacade: #{inspect redisFacadePid}");
 		{:ok, self()}
 	end
 
